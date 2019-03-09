@@ -1,0 +1,16 @@
+[
+{
+  "modid": "durnace",
+  "name": "Durnace",
+  "description": "A furnace, made with dirt.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["LotuxPunk"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

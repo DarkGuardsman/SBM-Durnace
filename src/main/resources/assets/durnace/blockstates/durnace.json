@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "burning=false,facing=north": {"model": "durnace:durnace"},
+    "burning=false,facing=east": {"model": "durnace:durnace","y": 90},
+    "burning=false,facing=south": {"model": "durnace:durnace","y": 180},
+    "burning=false,facing=west": {"model": "durnace:durnace","y": 270},
+    "burning=true,facing=north": {"model": "durnace:lit_durnace"},
+    "burning=true,facing=east": {"model": "durnace:lit_durnace","y": 90},
+    "burning=true,facing=south": {"model": "durnace:lit_durnace","y": 180},
+    "burning=true,facing=west": {"model": "durnace:lit_durnace","y": 270}
+  }
+}

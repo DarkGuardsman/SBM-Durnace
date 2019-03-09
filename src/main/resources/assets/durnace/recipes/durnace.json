@@ -1,0 +1,18 @@
+{
+  "type":"minecraft:crafting_shaped",
+  "pattern":[
+    "ddd",
+    "d d",
+    "ddd"
+  ],
+  "key":{
+    "d":{
+      "item":"minecraft:dirt",
+      "data": 0
+    }
+  },
+  "result":{
+    "item":"durnace:durnace",
+    "count":1
+  }
+}
