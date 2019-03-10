@@ -4,8 +4,6 @@ public class Reference {
     public static final String MODID = "durnace";
     public static final String MOD_NAME = "Durnace";
 
-    public static final int GUI_DURNACE = 0;
-
     public static class VERSION{
         public static final String MCVERSION = "1.12.2";
         public static final String MAJORMOD = "0";

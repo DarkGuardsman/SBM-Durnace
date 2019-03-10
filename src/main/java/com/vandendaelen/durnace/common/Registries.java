@@ -6,7 +6,9 @@ import com.vandendaelen.durnace.common.tileentity.TileDurnace;
 import com.vandendaelen.durnace.util.BlockNames;
 import com.vandendaelen.durnace.util.Reference;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFurnace;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -21,6 +23,8 @@ import net.minecraftforge.registries.IForgeRegistry;
 public class Registries {
     @GameRegistry.ObjectHolder(BlockNames.DURNACE)
     public static BlockDurnace durnace;
+    @GameRegistry.ObjectHolder(BlockNames.LIT_DURNACE)
+    public static BlockDurnace lit_durnace;
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> e){
@@ -28,7 +32,12 @@ public class Registries {
 
         //Durnace
         GameRegistry.registerTileEntity(TileDurnace.class,new ResourceLocation(Reference.MODID,"TileDurnace"));
-        reg.register(new BlockDurnace());
+
+        durnace = new BlockDurnace(false);
+        lit_durnace = new BlockDurnace(true);
+
+        reg.register(durnace);
+        reg.register(lit_durnace);
     }
 
     @SubscribeEvent
