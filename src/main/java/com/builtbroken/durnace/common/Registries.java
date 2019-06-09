@@ -17,19 +17,21 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
 
-@Mod.EventBusSubscriber(modid= Reference.MODID)
-public class Registries {
+@Mod.EventBusSubscriber(modid = Reference.MODID)
+public class Registries
+{
     @GameRegistry.ObjectHolder(BlockNames.DURNACE)
     public static BlockDurnace durnace;
     @GameRegistry.ObjectHolder(BlockNames.LIT_DURNACE)
     public static BlockDurnace lit_durnace;
 
     @SubscribeEvent
-    public static void registerBlocks(RegistryEvent.Register<Block> e){
+    public static void registerBlocks(RegistryEvent.Register<Block> e)
+    {
         IForgeRegistry<Block> reg = e.getRegistry();
 
         //Durnace
-        GameRegistry.registerTileEntity(TileDurnace.class,new ResourceLocation(Reference.MODID,"TileDurnace"));
+        GameRegistry.registerTileEntity(TileDurnace.class, new ResourceLocation(Reference.MODID, "TileDurnace"));
 
         durnace = new BlockDurnace(false);
         lit_durnace = new BlockDurnace(true);
@@ -39,7 +41,8 @@ public class Registries {
     }
 
     @SubscribeEvent
-    public static void registerItems(RegistryEvent.Register<Item> e){
+    public static void registerItems(RegistryEvent.Register<Item> e)
+    {
         IForgeRegistry<Item> reg = e.getRegistry();
 
         //Durnace
@@ -47,7 +50,8 @@ public class Registries {
     }
 
     @SubscribeEvent
-    public static void registerModels(ModelRegistryEvent event) {
+    public static void registerModels(ModelRegistryEvent event)
+    {
         //Durnace
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(durnace), 0, new ModelResourceLocation(durnace.getRegistryName(), "normal"));
     }

@@ -17,19 +17,23 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-public class BlockDurnace extends BlockFurnace implements ITileEntityProvider {
-    public BlockDurnace(boolean burn) {
+public class BlockDurnace extends BlockFurnace implements ITileEntityProvider
+{
+    public BlockDurnace(boolean burn)
+    {
         super(burn);
         setHardness(1.5F);
         setSoundType(SoundType.GROUND);
         this.setTranslationKey(BlockNames.DURNACE);
         setCreativeTab(CreativeTabs.DECORATIONS);
 
-        if (burn) {
+        if (burn)
+        {
             setLightLevel(0.875F);
             this.setRegistryName(new ResourceLocation(BlockNames.LIT_DURNACE));
         }
-        else {
+        else
+        {
             this.setRegistryName(new ResourceLocation(BlockNames.DURNACE));
         }
     }
@@ -37,16 +41,20 @@ public class BlockDurnace extends BlockFurnace implements ITileEntityProvider {
     static Item durnace;
 
     @Override
-    public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+    public Item getItemDropped(IBlockState state, Random rand, int fortune)
+    {
         return durnace == null ? durnace = Item.getItemFromBlock(Registries.durnace) : durnace;
     }
 
     @Override
-    public void breakBlock(World world, BlockPos pos, IBlockState oldState) {
+    public void breakBlock(World world, BlockPos pos, IBlockState oldState)
+    {
         IBlockState state = world.getBlockState(pos);
-        if (state.getBlock() != Registries.durnace && state.getBlock() != Registries.lit_durnace) {
+        if (state.getBlock() != Registries.durnace && state.getBlock() != Registries.lit_durnace)
+        {
             TileEntity tileentity = world.getTileEntity(pos);
-            if (tileentity instanceof TileDurnace) {
+            if (tileentity instanceof TileDurnace)
+            {
                 InventoryHelper.dropInventoryItems(world, pos, (TileDurnace) tileentity);
                 world.updateComparatorOutputLevel(pos, this);
             }
@@ -55,7 +63,8 @@ public class BlockDurnace extends BlockFurnace implements ITileEntityProvider {
     }
 
     @Override
-    public TileEntity createNewTileEntity(World world, int meta) {
+    public TileEntity createNewTileEntity(World world, int meta)
+    {
         return new TileDurnace();
     }
 }
