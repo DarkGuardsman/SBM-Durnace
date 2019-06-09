@@ -1,14 +1,12 @@
-package com.vandendaelen.durnace.common;
+package com.builtbroken.durnace.common;
 
-import com.vandendaelen.durnace.common.block.BlockDurnace;
-import com.vandendaelen.durnace.common.item.ItemDurnace;
-import com.vandendaelen.durnace.common.tileentity.TileDurnace;
-import com.vandendaelen.durnace.util.BlockNames;
-import com.vandendaelen.durnace.util.Reference;
+import com.builtbroken.durnace.common.block.BlockDurnace;
+import com.builtbroken.durnace.common.item.ItemDurnace;
+import com.builtbroken.durnace.common.tileentity.TileDurnace;
+import com.builtbroken.durnace.util.BlockNames;
+import com.builtbroken.durnace.util.Reference;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockFurnace;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;

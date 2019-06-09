@@ -1,7 +1,7 @@
-package com.vandendaelen.durnace.common.tileentity;
+package com.builtbroken.durnace.common.tileentity;
 
-import com.vandendaelen.durnace.common.Registries;
-import com.vandendaelen.durnace.common.block.BlockDurnace;
+import com.builtbroken.durnace.common.Registries;
+import com.builtbroken.durnace.common.block.BlockDurnace;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;

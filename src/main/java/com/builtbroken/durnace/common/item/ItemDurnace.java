@@ -1,4 +1,4 @@
-package com.vandendaelen.durnace.common.item;
+package com.builtbroken.durnace.common.item;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;

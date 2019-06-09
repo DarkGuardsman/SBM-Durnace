@@ -1,6 +1,6 @@
-package com.vandendaelen.durnace;
+package com.builtbroken.durnace;
 
-import com.vandendaelen.durnace.util.Reference;
+import com.builtbroken.durnace.util.Reference;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;

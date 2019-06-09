@@ -1,4 +1,4 @@
-package com.vandendaelen.durnace.util;
+package com.builtbroken.durnace.util;
 
 public class Reference {
     public static final String MODID = "durnace";

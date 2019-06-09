@@ -1,8 +1,8 @@
-package com.vandendaelen.durnace.common.block;
+package com.builtbroken.durnace.common.block;
 
-import com.vandendaelen.durnace.common.Registries;
-import com.vandendaelen.durnace.common.tileentity.TileDurnace;
-import com.vandendaelen.durnace.util.BlockNames;
+import com.builtbroken.durnace.common.Registries;
+import com.builtbroken.durnace.common.tileentity.TileDurnace;
+import com.builtbroken.durnace.util.BlockNames;
 import net.minecraft.block.BlockFurnace;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.SoundType;
