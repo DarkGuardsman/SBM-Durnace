@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": {"model": "durnace:lit_durnace"},
-    "facing=east": {"model": "durnace:lit_durnace","y": 90},
-    "facing=south": {"model": "durnace:lit_durnace","y": 180},
-    "facing=west": {"model": "durnace:lit_durnace","y": 270}
-  }
-}

@@ -1,8 +1,62 @@
 {
+  "forge_marker": 1,
+  "defaults": {
+    "model": "orientable",
+    "textures": {
+      "particle": "durnace:blocks/dirt_furnace",
+      "up": "durnace:blocks/dirt_furnace_top",
+      "down": "durnace:blocks/dirt_furnace_top",
+      "north": "durnace:blocks/dirt_furnace",
+      "east": "durnace:blocks/dirt_furnace_side",
+      "south": "durnace:blocks/dirt_furnace_side",
+      "west": "durnace:blocks/dirt_furnace_side"
+    }
+  },
   "variants": {
-    "facing=north": {"model": "durnace:durnace"},
-    "facing=east": {"model": "durnace:durnace","y": 90},
-    "facing=south": {"model": "durnace:durnace","y": 180},
-    "facing=west": {"model": "durnace:durnace","y": 270}
+    "normal": [
+      {}
+    ],
+    "inventory": [
+      {}
+    ],
+    "burning": {
+      "true": {
+        "model": "orientable",
+        "textures": {
+          "particle": "durnace:blocks/dirt_furnace",
+          "up": "durnace:blocks/dirt_furnace_top",
+          "down": "durnace:blocks/dirt_furnace_top",
+          "north": "durnace:blocks/dirt_furnace_on",
+          "east": "durnace:blocks/dirt_furnace_side",
+          "south": "durnace:blocks/dirt_furnace_side",
+          "west": "durnace:blocks/dirt_furnace_side"
+        }
+      },
+      "false": {
+        "model": "orientable",
+        "textures": {
+          "particle": "durnace:blocks/dirt_furnace",
+          "up": "durnace:blocks/dirt_furnace_top",
+          "down": "durnace:blocks/dirt_furnace_top",
+          "north": "durnace:blocks/dirt_furnace",
+          "east": "durnace:blocks/dirt_furnace_side",
+          "south": "durnace:blocks/dirt_furnace_side",
+          "west": "durnace:blocks/dirt_furnace_side"
+        }
+      }
+    },
+    "facing": {
+      "north": {
+      },
+      "east": {
+        "y": 90
+      },
+      "south": {
+        "y": 180
+      },
+      "west": {
+        "y": 270
+      }
+    }
   }
 }
