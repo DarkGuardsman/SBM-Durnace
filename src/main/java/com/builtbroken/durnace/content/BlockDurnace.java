@@ -4,6 +4,7 @@ import com.builtbroken.durnace.Durnace;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.ITileEntityProvider;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.properties.PropertyDirection;
@@ -12,6 +13,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
@@ -31,12 +33,15 @@ import java.util.Random;
 
 public class BlockDurnace extends BlockContainer implements ITileEntityProvider
 {
+
     public static final PropertyDirection FACING = BlockHorizontal.FACING;
     public static final PropertyBool BURNING = PropertyBool.create("burning");
 
     public BlockDurnace()
     {
         super(Material.ROCK);
+        this.setHardness(2F);
+        this.setSoundType(SoundType.GROUND);
         this.setCreativeTab(CreativeTabs.DECORATIONS);
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(BURNING, false));
     }
@@ -89,7 +94,7 @@ public class BlockDurnace extends BlockContainer implements ITileEntityProvider
     @SideOnly(Side.CLIENT)
     public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rand)
     {
-        if(stateIn.getValue(BURNING))
+        if (stateIn.getValue(BURNING))
         {
             EnumFacing enumfacing = stateIn.getValue(FACING);
             double d0 = (double) pos.getX() + 0.5D;
